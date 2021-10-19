@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-header">
+    <div class="card-header-title">
+      <h1>{{card.name}}</h1>
+      <app-button
+        color="{{showAddTask ? 'red' : 'green'}}"
+        text="{{showAddTask ? 'Close' : 'Add'}}"
+        (btnClick)="toggleAddTask()">
+      </app-button>
+    </div>
+    <fa-icon
+      class="card-icon__delete"
+      (click)="onDeleteCard()" 
+      [icon]="faTimes">
+    </fa-icon>
+  </div>
+  <app-add-task [showAddTask]="showAddTask" (onAddTask)="addTask($event)"></app-add-task>
+
+  <app-task-item
+    *ngFor="let task of card.tasks" 
+    [task]="task"
+    (onDeleteTask)="deleteTask(task)"
+    (onToggleReminder)="toggleReminder(task)">
+  </app-task-item>
+</div>

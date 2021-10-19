@@ -1,0 +1,7 @@
+.board-header {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 26px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,27 @@
+.card {
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  min-width: 350px;
+}
+
+.card-header {
+  position: relative;
+  padding: 10px 16px;
+  gap: 20px;
+}
+
+.card-header-title {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.card-icon__delete {
+  cursor: pointer;
+  color: red;
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  font-size: 30px;
+}

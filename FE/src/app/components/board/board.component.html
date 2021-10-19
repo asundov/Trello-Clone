@@ -1,0 +1,25 @@
+<div class="board">
+  <div class="board-header">
+    <h1>TODO TODO</h1>
+    <app-button 
+      color="{{showAddCard ? 'red' : 'green'}}"
+      text="{{showAddCard ? 'Close' : 'Add'}}"
+      (btnClick)="toggleAddTask()">
+    </app-button>
+  </div>
+  <app-add-card 
+    *ngIf="showAddCard"
+    [owner]="owner"
+    (onAddCard)="addCard($event)"
+  >
+  </app-add-card>
+  <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+    <app-card
+      *ngFor="let card of cards" 
+      [card]="card"
+      (deleteCardEvent)="deleteCard($event)"
+      (updateCards)="updateCards()"
+    >
+    </app-card>
+  </div>
+</div>

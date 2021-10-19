@@ -1,0 +1,7 @@
+<form class="add-card-form" (ngSubmit)="onSubmit()">
+  <div class="form-control">
+    <label for="text">Create card</label>
+    <input type="text" name ="text" [(ngModel)]="name" id="text" placeholder="Name of the card">
+    <input type="submit" value="Create card" class="add-card-button" />
+  </div>
+</form>
